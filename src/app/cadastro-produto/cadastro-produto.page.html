@@ -5,9 +5,28 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">CadastroProduto</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
+  <ion-item>
+    <ion-input [(ngModel)]="produto.nome" 
+    label="Nome" labelPlacement="floating" placeholder="Digite o nome do produto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="produto.descricao"
+    label="Descrição" labelPlacement="floating" placeholder="Digite a descrição do produto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="produto.validade"
+    label="Validade" labelPlacement="floating" placeholder="Digite a validade do produto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="produto.preco" 
+    label="Preço" type="number" labelPlacement="floating" placeholder="Digite o preço do produto"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="salvarProduto()" expand="full" color="success">SALVAR</ion-button>
+  <ion-button routerLink="/" expand="full" fill="clear" color="dark">VOLTAR</ion-button>
+
 </ion-content>
