@@ -7,7 +7,7 @@ import { ProdutoService } from '../services/produto.service';
   templateUrl: './cadastro-produto.page.html',
   styleUrls: ['./cadastro-produto.page.scss'],
 })
-export class CadastroUsuarioPage implements OnInit {
+export class CadastroProdutoPage implements OnInit {
 
   produto: Produto = {
     nome: '',
@@ -15,18 +15,18 @@ export class CadastroUsuarioPage implements OnInit {
     validade: '',
     preco: 0
   };
-  
+
   constructor(private prodService: ProdutoService) { }
 
   ngOnInit() {
   }
 
   salvarProduto(){
-        
+
         this.prodService.salvar(this.produto).subscribe(retorno =>{
           this.produto = retorno;
           alert("Sucesso!, usuário: " + this.produto.id + "foi salvo!")
         });
-      
+
   }
 }
