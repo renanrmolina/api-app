@@ -1,12 +1,12 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>Cadastro de Usuário</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-item>
-    <ion-input [(ngModel)]="usuario.nome" 
+    <ion-input [(ngModel)]="usuario.nome"
     label="Nome" labelPlacement="floating" placeholder="Digite nome completo"></ion-input>
   </ion-item>
 
@@ -21,10 +21,10 @@
   </ion-item>
 
   <ion-item>
-    <ion-input [(ngModel)]="confirmaSenha" 
+    <ion-input [(ngModel)]="confirmaSenha"
     label="Confirme a Senha" type="password" labelPlacement="floating" placeholder="Repita a senha"></ion-input>
   </ion-item>
 
   <ion-button (click)="salvarUsuario()" expand="full" color="success">SALVAR</ion-button>
-  <ion-button routerLink="/" expand="full" fill="clear" color="dark">VOLTAR</ion-button>
+  <ion-button routerLink="/" expand="full" color="success">VOLTAR</ion-button>
 </ion-content>

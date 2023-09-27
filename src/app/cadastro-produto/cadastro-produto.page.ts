@@ -25,7 +25,7 @@ export class CadastroProdutoPage implements OnInit {
 
         this.prodService.salvar(this.produto).subscribe(retorno =>{
           this.produto = retorno;
-          alert("Sucesso!, usuário: " + this.produto.id + "foi salvo!")
+          alert("Sucesso! Produto " + this.produto.id + " foi salvo!")
         });
 
   }
